@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node / misc
+node_modules/
+.vscode/
+*.log

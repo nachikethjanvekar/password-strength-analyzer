@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Password Strength Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="title">🛡️ Password Strength Analyzer</div>
+    <p class="subtitle">Type a password below to see how strong it is and how to improve it.</p>
+
+    <label for="password" class="field-label">Password</label>
+    <div class="password-wrapper">
+      <input
+        id="password"
+        type="password"
+        class="password-input"
+        placeholder="Start typing…"
+        autocomplete="off"
+        aria-label="Password input"
+      />
+      <button id="toggleVisibility" type="button" class="toggle-visibility" aria-pressed="false">Show</button>
+    </div>
+
+    <div class="strength-header">
+      <div id="strengthLabel" class="strength-label">Strength: —</div>
+      <div id="strengthScore" class="strength-score">Score: 0 / 100</div>
+    </div>
+
+    <div class="strength-bar" aria-hidden="true">
+      <div class="strength-bar-fill" id="strengthBarFill"></div>
+    </div>
+
+    <div class="pill-row">
+      <div class="pill"><span class="pill-dot bad" id="pillLengthDot"></span><span id="pillLengthText">Too short</span></div>
+      <div class="pill"><span class="pill-dot bad" id="pillVarietyDot"></span><span id="pillVarietyText">Low variety</span></div>
+      <div class="pill"><span class="pill-dot warn" id="pillCommonDot"></span><span id="pillCommonText">Not checked</span></div>
+    </div>
+
+    <div>
+      <div class="list-header">Requirements check</div>
+      <ul class="checklist" aria-live="polite">
+        <li id="reqLength"><span class="icon">✖</span><span>At least 12 characters</span></li>
+        <li id="reqLower"><span class="icon">✖</span><span>Contains lowercase letters (a–z)</span></li>
+        <li id="reqUpper"><span class="icon">✖</span><span>Contains uppercase letters (A–Z)</span></li>
+        <li id="reqNumber"><span class="icon">✖</span><span>Contains numbers (0–9)</span></li>
+        <li id="reqSymbol"><span class="icon">✖</span><span>Contains symbols (!@#$…)</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="list-header">Suggestions</div>
+      <ul class="suggestions" id="suggestionsList" aria-live="polite">
+        <li>Start typing to see suggestions.</li>
+      </ul>
+    </div>
+
+    <!-- Pwned check UI (HIBP) -->
+    <div id="pwnedContainer" class="pwned-container" aria-live="polite" style="margin-top:8px;">
+      <div class="list-header">Breach check</div>
+      <div id="pwnedStatus" class="pwned-status">Not checked</div>
+    </div>
+
+    <!-- Generator: place before footer -->
+    <div class="generator-container" aria-label="Password generator">
+      <div class="gen-row">
+        <label for="genLength" class="field-label">Length: <span id="genLengthVal">16</span></label>
+        <input id="genLength" type="range" min="8" max="32" value="16" />
+      </div>
+
+      <div class="gen-row gen-options" role="group" aria-label="Character options">
+        <label><input type="checkbox" id="optLower" checked /> a–z</label>
+        <label><input type="checkbox" id="optUpper" checked /> A–Z</label>
+        <label><input type="checkbox" id="optNumbers" checked /> 0–9</label>
+        <label><input type="checkbox" id="optSymbols" checked /> !@#$%</label>
+      </div>
+
+      <div class="gen-row gen-buttons">
+        <button id="generateBtn" type="button">Generate</button>
+        <button id="copyBtn" type="button">Copy</button>
+        <input id="generatedOutput" readonly class="generated-output" aria-label="Generated password" />
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>Runs fully in your browser. Your password is not sent anywhere.</span>
+      <span class="tag">demo • security</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
