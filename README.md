@@ -18,6 +18,7 @@ No backend. No data stored.
 **Everything runs inside your browser.**
 
 
+
 ## 🚀 Features
 
 ### 🟩 Real-Time Strength Analysis
@@ -34,6 +35,7 @@ No backend. No data stored.
   - 0–9
   - Symbols (!@#$…)
 - “Copy” button for convenience
+  
 
 ### 🔍 Breach Check (HIBP)
 Uses HaveIBeenPwned's **k-anonymity API**, meaning:
@@ -43,10 +45,14 @@ Uses HaveIBeenPwned's **k-anonymity API**, meaning:
 - Matching is done client-side  
 - Shows how many times password appears in breaches (if any)
 
+
+
 ### 💡 Smart Suggestions
 - Personalized tips based on password weaknesses
 - Guidance for stronger & safer passwords
 - Warnings for common or known-breached passwords
+
+
 
 
 ## 🛠️ Tech Stack
@@ -58,6 +64,7 @@ Uses HaveIBeenPwned's **k-anonymity API**, meaning:
 | **JavaScript (Vanilla)** | Logic, scoring, generator, breach check |
 | **Web Crypto API** | SHA-1 hashing for HIBP |
 | **GitHub Pages** | Deployment |
+
 
 
 
