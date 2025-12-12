@@ -2,6 +2,8 @@
 
 LIVE DEMO : https://nachikethjanvekar.github.io/password-strength-analyzer/
 
+![screenshot](screenshot.png)
+
 A lightweight, client-side web app that analyzes password strength in real time, suggests improvements, includes a one-click password generator, and checks whether a password has appeared in known breaches using the Have I Been Pwned (k-anonymity) API.
 
 ## Features
@@ -16,5 +18,6 @@ A lightweight, client-side web app that analyzes password strength in real time,
 - HTML, CSS, vanilla JavaScript (no frameworks)
 - Uses Web Crypto API (`crypto.subtle`) for SHA-1 hashing
 - Runs 100% in the browser — no server required
+
 
 
