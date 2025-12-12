@@ -1,6 +1,8 @@
 # 🛡️ Password Strength Analyzer
 
-LIVE DEMO : https://nachikethjanvekar.github.io/password-strength-analyzer/
+LIVE DEMO ( GITHUB PAGES ) : https://nachikethjanvekar.github.io/password-strength-analyzer/
+
+LIVE DEMO ( VERCEL ) :  https://password-strength-analyzer-xi.vercel.app/
 
 
 ## 📌 Overview
@@ -64,6 +66,7 @@ Uses HaveIBeenPwned's **k-anonymity API**, meaning:
 | **JavaScript (Vanilla)** | Logic, scoring, generator, breach check |
 | **Web Crypto API** | SHA-1 hashing for HIBP |
 | **GitHub Pages** | Deployment |
+
 
 
 
